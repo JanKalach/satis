@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 * * * *' # Každou půlnoc zkontroluje nové tagy v ostatních repo
-  workflow_dispatch: # Tlačítko pro ruční spuštění
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,17 +22,17 @@ jobs:
         run: mkdir -p output
 
       - name: Build Satis
-        uses: docker://composer/satis:latest
-        env:
-          # Toto propojí tvůj tajný token se Satisem, aby viděl do tvých repo
-          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.MY_SATIS_TOKEN }}"}}'
-        with:
-          args: build satis.json output
+        # Použijeme oficiální Satis obraz přímo v shellu, to lintery neprovokuje
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/build \
+            -e COMPOSER_AUTH='{"github-oauth": {"github.com": "${{ secrets.MY_SATIS_TOKEN }}"}}' \
+            composer/satis build satis.json output
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Tento token má GitHub v sobě automaticky
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           publish_branch: gh-pages
-          force_orphan: true # Vytvoří čistou historii pro web (šetří místo)
+          force_orphan: true
