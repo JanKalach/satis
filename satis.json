@@ -1,6 +1,6 @@
 {
     "name": "culprit/satis",
-    "homepage": "https://github.com/JanKalach/satis",
+    "homepage": "https://jankalach.github.io/satis/",
     "repositories": [
         { "type": "vcs", "url": "https://github.com/JanKalach/model" }
     ],
