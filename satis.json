@@ -2,7 +2,7 @@
     "name": "culprit/satis",
     "homepage": "https://jankalach.github.io/satis/",
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/JanKalach/model" }
+        { "type": "vcs", "url": "https://github.com/LeoExpress/packagist" }
     ],
     "require-all": true,
     "require-dependencies": true,
