@@ -27,7 +27,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/build \
             -e COMPOSER_AUTH='{"github-oauth": {"github.com": "${{ secrets.MY_SATIS_TOKEN }}"}}' \
-            composer/satis build satis.json output
+            composer/satis /bin/sh -c "git config --global --add safe.directory /build && php /satis/bin/satis build satis.json output"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
