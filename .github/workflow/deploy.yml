@@ -1,0 +1,38 @@
+name: Deploy Satis to Pages
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 * * * *' # Každou půlnoc zkontroluje nové tagy v ostatních repo
+  workflow_dispatch: # Tlačítko pro ruční spuštění
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Satis configuration
+        uses: actions/checkout@v4
+
+      - name: Create output directory
+        run: mkdir -p output
+
+      - name: Build Satis
+        uses: docker://composer/satis:latest
+        env:
+          # Toto propojí tvůj tajný token se Satisem, aby viděl do tvých repo
+          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.MY_SATIS_TOKEN }}"}}'
+        with:
+          args: build satis.json output
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Tento token má GitHub v sobě automaticky
+          publish_dir: ./output
+          publish_branch: gh-pages
+          force_orphan: true # Vytvoří čistou historii pro web (šetří místo)
