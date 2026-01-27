@@ -40,7 +40,7 @@ jobs:
 
       - name: Delete old workflow runs
         run: |
-          RUNS_TO_DELETE=$(gh run list --json databaseId | jq -r '.[4:].[] | .databaseId')
+          RUNS_TO_DELETE=$(gh run list --json databaseId | jq -r '.[3:].[] | .databaseId')
           
           for run_id in $RUNS_TO_DELETE; do
             gh run delete "$run_id"
