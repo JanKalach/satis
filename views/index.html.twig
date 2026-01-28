@@ -44,54 +44,14 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo">
                                 <span class="logo-lg">
-                                    <img src="assets/img/logo-jg.png" alt="" height="17">
+                                    <img src="assets/img/logo-lg.png" alt="" height="17">
                                 </span>
                             </a>
                         </div>
                         <!-- App Search-->
                         <form class="app-search d-none d-md-block">
                             <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off" id="search-options" value="">
-                                <span class="mdi mdi-magnify search-widget-icon"></span>
-                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none" id="search-close-options"></span>
-                            </div>
-                        </form>
-                        <form class="my-3">
-                            <div class="input-group">
-                                <label for="search" class="visually-hidden">Filter packages</label>
-                                <input type="search"
-                                       id="search"
-                                       class="form-control"
-                                       placeholder="Filter packages"
-                                       autocomplete="off"
-                                       autofocus>
-                                <select class="form-select filter-field" aria-label="Filter by...">
-                                    <option value="all" selected disabled hidden>Filter by..</option>
-                                    <option value="all">All fields</option>
-                                    <optgroup label="Specific field...">
-                                        <option value="name">Name</option>
-                                        {% for fieldName, label in fieldsToToggle %}
-                                            {% if fieldName != 'required-by' %}
-                                                <option value="{{ fieldName }}">{{ label }}</option>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </optgroup>
-                                </select>
-                                <div class="input-group-append">
-                                    <button
-                                            class="btn btn-outline-secondary d-none toggle-settings"
-                                            type="button"
-                                            aria-pressed="false"
-                                            aria-label="Toggle settings"
-                                            title="Toggle settings"
-                                            aria-expanded="false"
-                                            aria-controls="package-filter-settings"
-                                    >
-                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" role="img">
-                                            <path d="M11.998 7.66A4.339 4.339 0 007.661 12a4.342 4.342 0 004.337 4.34A4.33 4.33 0 0016.323 12a4.327 4.327 0 00-4.325-4.34zm8.697 6.833l-.782 1.883 1.395 2.739.184.362-1.933 1.933-3.173-1.498-1.883.773-.956 2.927-.122.388h-2.733l-1.183-3.303-1.883-.777-2.743 1.391-.362.181-1.933-1.932 1.497-3.174-.776-1.882-2.921-.954L0 13.425v-2.732L3.306 9.51l.775-1.88-1.39-2.745-.183-.36 1.93-1.93L7.615 4.09l1.88-.778.956-2.924.123-.388h2.732l1.183 3.307 1.879.778 2.744-1.392.365-.184 1.931 1.93-1.496 3.172.773 1.885 2.93.955.385.123v2.73l-3.305 1.189z"/>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <input type="search" class="form-control" placeholder="Search..." autocomplete="off" id="search" value="">
                             </div>
                         </form>
                     </div>
@@ -280,6 +240,8 @@
 <script src="https://velzon.themesbrand.com/assets/libs/node-waves/node-waves.min.js"></script>
 <script src="https://velzon.themesbrand.com/assets/libs/feather-icons/feather-icons.min.js"></script>
 <script src="https://velzon.themesbrand.com/assets/js/pages/plugins/lord-icon-2.1.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+
 <script src="https://velzon.themesbrand.com/assets/libs/toastr/toastr.min.js"></script>
 <script src="https://velzon.themesbrand.com/assets/js/plugins.min.js"></script>
 <script src="https://velzon.themesbrand.com/assets/js/app.js"></script>
