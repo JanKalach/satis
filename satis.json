@@ -11,5 +11,8 @@
         { "type": "vcs", "url": "https://github.com/JanKalach/packagist-velzon" },
         { "type": "vcs", "url": "https://github.com/JanKalach/packagist-web-project" }
     ],
-    "require-all": true
+    "require-all": true,
+    "config": {
+        "output-html": false
+    }
 }
