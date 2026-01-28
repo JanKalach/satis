@@ -57,7 +57,9 @@
                 <optgroup label="Specific field...">
                     <option value="name">Name</option>
                     {% for fieldName, label in fieldsToToggle %}
+                        {% if fieldName != 'required-by' %}
                         <option value="{{ fieldName }}">{{ label }}</option>
+                        {% endif %}
                     {% endfor %}
                 </optgroup>
             </select>
@@ -113,7 +115,9 @@
                         <option value="all" selected disabled hidden>Select field...</option>
                         <option value="name">Name</option>
                         {% for fieldName, label in fieldsToToggle %}
+                            {% if fieldName != 'required-by' %}
                             <option value="{{ fieldName }}">{{ label }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
@@ -127,6 +131,7 @@
                             disabled>Show All</button>
                 </div>
                 {% for fieldName, label in fieldsToToggle %}
+                    {% if fieldName != 'required-by' %}
                     <div class="form-check form-check-inline">
                         <input
                                 id="toggle-field-{{ fieldName }}"
@@ -136,6 +141,7 @@
                                 checked>
                         <label class="form-check-label" for="toggle-field-{{ fieldName }}">{{ label }}</label>
                     </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
