@@ -16,6 +16,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Clean output directory
+        run: rm -rf output
+
       - name: Checkout Satis configuration
         uses: actions/checkout@v4
 
