@@ -1,0 +1,19 @@
+{
+    "packages": [],
+    "includes": {
+        "include/all$57aec757e92673165ef515b214779cd31eb0efcc.json": {
+            "sha1": "57aec757e92673165ef515b214779cd31eb0efcc"
+        }
+    },
+    "metadata-url": "/satis/p2/%package%.json",
+    "available-packages": [
+        "leo/config",
+        "leo/mail",
+        "leo/model",
+        "leo/security",
+        "leo/utils",
+        "leo/web-project",
+        "leothemes/panely",
+        "leothemes/velzon"
+    ]
+}
