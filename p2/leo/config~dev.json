@@ -1,0 +1,139 @@
+{
+    "packages": {
+        "leo/config": [
+            {
+                "name": "leo/config",
+                "version": "dev-OT-update",
+                "version_normalized": "dev-OT-update",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:LeoExpress/phpPkg-config.git",
+                    "reference": "5cda501a85b7710e3d1628068c234aeefd7e665d"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/LeoExpress/phpPkg-config/zipball/5cda501a85b7710e3d1628068c234aeefd7e665d",
+                    "reference": "5cda501a85b7710e3d1628068c234aeefd7e665d",
+                    "shasum": ""
+                },
+                "require": {
+                    "contributte/console": "^0.11",
+                    "ext-curl": "*",
+                    "ext-pdo": "*",
+                    "guzzlehttp/guzzle": "^7.9",
+                    "nette/database": "^3.2 || ^4",
+                    "nette/di": "^3.2",
+                    "php": ">=8.1 <8.5",
+                    "tracy/tracy": "^2.10"
+                },
+                "require-dev": {
+                    "nette/application": "@stable",
+                    "nette/forms": "@stable",
+                    "nette/security": "@stable",
+                    "nikic/php-parser": "^5.3@stable",
+                    "phpstan/phpstan-nette": "^2.0@stable"
+                },
+                "time": "2026-08-31T21:10:17+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "Leo\\Config\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Jan Kalach",
+                        "email": "jan.kalach@le.cz"
+                    },
+                    {
+                        "name": "Ondřej Topinka",
+                        "email": "ondrej.topinka@le.cz"
+                    }
+                ],
+                "description": "⚙ Leo Config: Store specific configuration setting for application, users to database",
+                "keywords": [
+                    "application configuration",
+                    "composer",
+                    "config",
+                    "interactive",
+                    "nette",
+                    "user configuration"
+                ],
+                "support": {
+                    "source": "https://github.com/LeoExpress/phpPkg-config/tree/OT-update",
+                    "issues": "https://github.com/LeoExpress/phpPkg-config/issues"
+                }
+            },
+            {
+                "name": "leo/config",
+                "version": "dev-master",
+                "version_normalized": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:LeoExpress/phpPkg-config.git",
+                    "reference": "2324511799075cfc645afdd98455ebe423b4bb64"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/LeoExpress/phpPkg-config/zipball/2324511799075cfc645afdd98455ebe423b4bb64",
+                    "reference": "2324511799075cfc645afdd98455ebe423b4bb64",
+                    "shasum": ""
+                },
+                "require": {
+                    "contributte/console": "^0.11",
+                    "ext-curl": "*",
+                    "ext-pdo": "*",
+                    "guzzlehttp/guzzle": "^7.9",
+                    "nette/database": "^3.2 || ^4",
+                    "nette/di": "^3.2",
+                    "php": ">=8.1 <8.5",
+                    "tracy/tracy": "^2.10"
+                },
+                "require-dev": {
+                    "nette/application": "@stable",
+                    "nette/forms": "@stable",
+                    "nette/security": "@stable",
+                    "nikic/php-parser": "^5.3@stable",
+                    "phpstan/phpstan-nette": "^2.0@stable"
+                },
+                "time": "2026-04-29T15:07:39+00:00",
+                "default-branch": true,
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "Leo\\Config\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Jan Kalach",
+                        "email": "jan.kalach@le.cz"
+                    },
+                    {
+                        "name": "Ondřej Topinka",
+                        "email": "ondrej.topinka@le.cz"
+                    }
+                ],
+                "description": "⚙ Leo Config: Store specific configuration setting for application, users to database",
+                "keywords": [
+                    "application configuration",
+                    "composer",
+                    "config",
+                    "interactive",
+                    "nette",
+                    "user configuration"
+                ],
+                "support": {
+                    "source": "https://github.com/LeoExpress/phpPkg-config/tree/v2.0.2.2",
+                    "issues": "https://github.com/LeoExpress/phpPkg-config/issues"
+                }
+            }
+        ]
+    }
+}
