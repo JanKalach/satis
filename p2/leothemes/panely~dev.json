@@ -1,0 +1,41 @@
+{
+    "packages": {
+        "leothemes/panely": [
+            {
+                "name": "leothemes/panely",
+                "version": "dev-master",
+                "version_normalized": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:LeoExpress/phpPkg-theme-panely.git",
+                    "reference": "345eb11def44d907e11937bcea6979d89619c790"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/LeoExpress/phpPkg-theme-panely/zipball/345eb11def44d907e11937bcea6979d89619c790",
+                    "reference": "345eb11def44d907e11937bcea6979d89619c790",
+                    "shasum": ""
+                },
+                "require": {
+                    "frontpack/composer-assets-plugin": ">=1.0"
+                },
+                "time": "2026-10-15T08:45:42+00:00",
+                "default-branch": true,
+                "type": "library",
+                "autoload": {
+                    "classmap": [
+                        "src/"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "description": "Leo Theme - Panely",
+                "support": {
+                    "source": "https://github.com/LeoExpress/phpPkg-theme-panely/tree/v1.0.10",
+                    "issues": "https://github.com/LeoExpress/phpPkg-theme-panely/issues"
+                }
+            }
+        ]
+    }
+}
